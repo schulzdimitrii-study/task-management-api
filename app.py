@@ -7,6 +7,11 @@ tasks = []
 task_id_controller = 1
 
 
+@app.route("/")
+def index():
+    return jsonify({"message": "Bem-vindo à API de Tarefas!"})
+
+
 @app.route("/tasks", methods=["POST"])
 def create_task():
     global task_id_controller
